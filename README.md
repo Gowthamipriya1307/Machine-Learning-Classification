@@ -89,5 +89,5 @@ To run this notebook locally:
 
 ```bash
 git clone <https://github.com/Gowthamipriya1307/Machine-Learning-Classification>
-cd stroke-prediction
+cd Machine-Learning-Classification
 jupyter notebook
