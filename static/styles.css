@@ -1,1 +1,87 @@
+body {
+    background-image: url("https://www.emergencyphysicians.org/siteassets/emphysicians/all-images/stroke3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: "Gidole", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Oswald";
+}
+
+h2 {
+    border-bottom-style: outset;
+}
+
+header {
+    border-style: outset;
+    background-color: skyblue;
+    padding: 0.3em;
+    text-align: center;
+    margin: 0.3em;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form h4 {
+    margin: 0.5em 0 0.2em;
+}
+
+label {
+    margin-right: 1em;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.4em;
+    margin-top: 0.3em;
+}
+
+button {
+    padding: 0.6em 1.2em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+}
+
+/* NEW classes for result styling */
+.high-risk {
+    color: red;
+    font-weight: bold;
+}
+
+.low-risk {
+    color: green;
+    font-weight: bold;
+}
 
