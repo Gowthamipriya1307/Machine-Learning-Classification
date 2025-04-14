@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Stroke Prediction</title>
 
+    <!-- Link to local CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1><b>Brain Stroke Prediction Model</b></h1>
+        <p>
+            Brain stroke is a leading cause of death worldwide. This model helps predict the likelihood of a stroke based on your health and lifestyle details.
+        </p>
+    </header>
+
+    <main>
+        <form action="{{ url_for('predict') }}" method="post">
+            <h2><b>User Input Features</b></h2>
+
+            <h4>Enter your gender</h4>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required>Male</label>
+                <label><input type="radio" name="gender" value="Female">Female</label>
+            </div>
+
+            <h4>Enter your age</h4>
+            <input type="text" name="age" placeholder="age" required>
+
+            <h4>Do you have hypertension?</h4>
+            <div class="radio-group">
+                <label><input type="radio" name="hypertension" value="Yes" required>Yes</label>
+                <label><input type="radio" name="hypertension" value="No">No</label>
+            </div>
+
+            <h4>Do you have heart disease?</h4>
+            <div class="radio-group">
+                <label><input type="radio" name="heart_disease" value="Yes" required>Yes</label>
+                <label><input type="radio" name="heart_disease" value="No">No</label>
+            </div>
+
+            <h4>Are you married?</h4>
+            <div class="radio-group">
+                <label><input type="radio" name="ever_married" value="Yes" required>Yes</label>
+                <label><input type="radio" name="ever_married" value="No">No</label>
+            </div>
+
+            <h4>Select your work type</h4>
+            <select name="work_type" required>
+                <option value="Private">Private</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="children">children</option>
+                <option value="Govt_job">Govt_job</option>
+                <option value="Never_worked">Never_worked</option>
+            </select>
+
+            <h4>Select your residence type</h4>
+            <div class="radio-group">
+                <label><input type="radio" name="residence_type" value="Urban" required>Urban</label>
+                <label><input type="radio" name="residence_type" value="Rural">Rural</label>
+            </div>
+
+            <h4>Enter your glucose level</h4>
+            <input type="text" name="avg_glucose_level" placeholder="avg_glucose_level" required>
+
+            <h4>Enter your BMI</h4>
+            <input type="text" name="bmi" placeholder="bmi" required>
+
+            <h4>Select your smoking status</h4>
+            <select name="smoking_status" required>
+                <option value="never smoked">never smoked</option>
+                <option value="formerly smoked">formerly smoked</option>
+                <option value="smokes">smokes</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+
+            <br><br>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <h2 class="{{ prediction_class }}">{{ prediction_text }}</h2>
+        {% endif %}
+    </main>
+</body>
+</html>
