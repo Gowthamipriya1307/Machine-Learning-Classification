@@ -107,17 +107,26 @@ pip install joblib==1.3.2
 
 ---
 
-**## 🚀 Getting Started**
+## 🚀 Getting Started
 
-To run this notebook locally:
-1.Clone the Repo
-```bash
-git clone <https://github.com/Gowthamipriya1307/Machine-Learning-Classification>
-cd Machine-Learning-Classification
-2.Launch the notebook for training/evaluation:
-```bash
-jupyter notebook
-3.To run the Flask app:
-```bash
-python app.py
+To run this project locally:
+
+1. **Clone the Repository**
+
+    ```bash
+    git clone https://github.com/Gowthamipriya1307/Machine-Learning-Classification
+    cd Machine-Learning-Classification
+    ```
+
+2. **Launch the Jupyter Notebook for training and evaluation**
+
+    ```bash
+    jupyter notebook
+    ```
+
+3. **Run the Flask Web App**
+
+    ```bash
+    python app.py
+    ```
 
