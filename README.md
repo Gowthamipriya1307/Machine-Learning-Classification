@@ -1,6 +1,6 @@
 # 🧠 Stroke Prediction Using Machine Learning
 
-This project focuses on predicting the likelihood of a stroke based on a variety of health and demographic features using machine learning. It includes thorough data preprocessing, exploratory data analysis (EDA), model training, and performance evaluation.
+This project focuses on predicting the likelihood of a stroke based on a variety of health and demographic features using machine learning. It includes thorough data preprocessing, exploratory data analysis (EDA), model training, and performance evaluation, along with a Flask web application for real-time predictions.
 
 ---
 
@@ -31,8 +31,8 @@ This project focuses on predicting the likelihood of a stroke based on a variety
 
 - **Missing Values**: Imputed missing values in `bmi` using the **median**, due to its right-skewed distribution.
 - **Data Cleaning**: Removed the single row where gender was `"Other"`.
-- **Encoding**: Applied **one-hot encoding** using `pd.get_dummies()` for categorical variables.
-- **Feature Scaling**: Standardized features using **`StandardScaler()`** to normalize the data.
+- **Encoding**: Applied **one-hot encoding** for categorical variables.
+- **Feature Scaling**: Standardized numerical features using **`StandardScaler()`** to normalize the data.
 
 ---
 
@@ -65,13 +65,12 @@ Notable findings:
 - F1-score  
 - ROC AUC Score
 
-Refer to the notebook for full evaluation details and comparison charts.
 
 ---
 
 ## ✅ Results
 
-Model performance is compared using several metrics to identify the most effective classifier for stroke prediction. Final results and interpretations are shown in the notebook.
+Model performance is compared using several metrics and maximizing recall to identify the most effective classifier for stroke prediction. Final results and interpretations are shown in the notebook.
 
 ---
 
@@ -83,11 +82,40 @@ Model performance is compared using several metrics to identify the most effecti
 
 ---
 
-## 🚀 Getting Started
+
+
+## 🌐 Web Application
+
+A user-friendly **Flask web app** was built to allow users to input their details and get instant predictions on stroke risk.
+
+### Features:
+- Input fields for all health/demographic data
+- Dynamic feedback based on model prediction
+- Responsive and styled with CSS & Google Fonts
+
+---
+
+## 📦 Requirements
+
+Install the required libraries using:
+
+```bash
+pip install Flask==2.3.3
+pip install pandas==2.1.4
+pip install scikit-learn==1.3.2
+pip install joblib==1.3.2
+
+**## 🚀 Getting Started**
 
 To run this notebook locally:
-
+1.Clone the Repo
 ```bash
 git clone <https://github.com/Gowthamipriya1307/Machine-Learning-Classification>
 cd Machine-Learning-Classification
+2.Launch the notebook for training/evaluation:
+```bash
 jupyter notebook
+3.To run the Flask app:
+```bash
+python app.py
+
