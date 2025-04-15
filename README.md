@@ -99,11 +99,12 @@ A user-friendly **Flask web app** was built to allow users to input their detail
 
 Install the required libraries using:
 
-```bash
+```
 pip install Flask==2.3.3
 pip install pandas==2.1.4
 pip install scikit-learn==1.3.2
 pip install joblib==1.3.2
+```
 
 ---
 
@@ -113,20 +114,22 @@ To run this project locally:
 
 1. **Clone the Repository**
 
-    ```bash
+    ```
     git clone https://github.com/Gowthamipriya1307/Machine-Learning-Classification
     cd Machine-Learning-Classification
     ```
 
 2. **Launch the Jupyter Notebook for training and evaluation**
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
 3. **Run the Flask Web App**
 
-    ```bash
+    ```
     python app.py
     ```
+
+
 
