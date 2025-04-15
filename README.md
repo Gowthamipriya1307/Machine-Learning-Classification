@@ -105,6 +105,8 @@ pip install pandas==2.1.4
 pip install scikit-learn==1.3.2
 pip install joblib==1.3.2
 
+---
+
 **## 🚀 Getting Started**
 
 To run this notebook locally:
