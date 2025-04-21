@@ -74,13 +74,6 @@ Model performance is compared using several metrics and maximizing recall to ide
 
 ---
 
-## 🌐 Future Improvements
-
-- Develop a **Flask-based web application** to make predictions via a user-friendly interface.
-- Deploy the trained model as an **API** for frontend or mobile integration.
-- Enhance **user experience (UX)** with visual feedback and health tips based on inputs.
-
----
 
 
 
